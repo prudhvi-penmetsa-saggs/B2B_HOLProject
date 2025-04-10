@@ -48,14 +48,6 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2040
-- serviceName: project.b2b_hol.integrations:createSalesTax2
-  packages:
-  - name: B2B_HOLProject
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
 - serviceName: pub.math:divideFloats
   packages:
   - name: WmPublic
@@ -64,6 +56,14 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2040
+- serviceName: project.b2b_hol.integrations:createSalesTax2
+  packages:
+  - name: B2B_HOLProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.transactionType
   : NO_TRANSACTION
