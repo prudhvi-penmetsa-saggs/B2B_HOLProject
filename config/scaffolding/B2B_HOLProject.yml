@@ -7,3 +7,24 @@ packages:
   gitUrl: https://github.com/prudhvi-penmetsa-saggs
   gitUsername: prudhvi-penmetsa-saggs
   gitBranch: main
+services:
+- serviceName: project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:getTaxRate2
+  packages:
+  - name: B2B_HOLProject
+    version: "1.0"
+- serviceName: project.b2b_hol.integrations:createSalesTax2
+  packages:
+  - name: B2B_HOLProject
+    version: "1.0"
+- serviceName: pub.math:multiplyFloats
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2040
+- serviceName: pub.math:divideFloats
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2040
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2040
