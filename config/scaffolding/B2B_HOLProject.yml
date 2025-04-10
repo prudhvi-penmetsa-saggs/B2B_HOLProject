@@ -12,6 +12,10 @@ services:
   packages:
   - name: B2B_HOLProject
     version: "1.0"
+- serviceName: project.b2b_hol.integrations:calculateSalesTax
+  packages:
+  - name: B2B_HOLProject
+    version: "1.0"
 - serviceName: project.b2b_hol.integrations:createSalesTax2
   packages:
   - name: B2B_HOLProject
