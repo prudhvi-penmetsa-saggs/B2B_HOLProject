@@ -7,19 +7,42 @@ packages:
   gitUrl: https://github.com/prudhvi-penmetsa-saggs
   gitUsername: prudhvi-penmetsa-saggs
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
 services:
+- serviceName: project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_TaxDB
+  packages:
+  - name: B2B_HOLProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:getTaxRate2
   packages:
   - name: B2B_HOLProject
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.b2b_hol.integrations:calculateSalesTax
   packages:
   - name: B2B_HOLProject
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.b2b_hol.integrations:createSalesTax2
   packages:
   - name: B2B_HOLProject
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: pub.math:multiplyFloats
   packages:
   - name: WmPublic
@@ -32,3 +55,50 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2040
+configurationVariables:
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.user
+  : wmuser
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.poolable
+  : "true"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.minimumPoolSize
+  : "0"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.serverName
+  : mysql
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.trustStore
+  : ""
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionEnabled
+  : "false"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.password
+  : "{AES}NhfBA+N8zoZHccGe72AxsA=="
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.keyStore
+  : ""
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.databaseName
+  : demodata
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.dbType
+  : MySQL
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.B2B_HOLProject.project.b2b_hol.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.driverType
+  : MYSQL_8023
